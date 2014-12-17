@@ -1,0 +1,12 @@
+package com.kamal;
+
+public class ThreadMain {
+	public static void main(String[] args) {
+		final Friend shafik = new Friend("Shafik");
+		final Friend afran = new Friend("Afran");
+		Thread t1 = new Thread(new FriendThread(shafik, afran));
+		Thread t2 = new Thread(new FriendThread(afran, shafik));
+		t1.start();
+		t2.start();
+	}
+}
