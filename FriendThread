@@ -1,0 +1,19 @@
+package com.kamal;
+
+public class FriendThread implements Runnable {
+
+	Friend f1;
+	Friend f2;
+	
+	public FriendThread(Friend f1, Friend f2)
+	{
+		this.f1 = f1;
+		this.f2 = f2;
+	}
+	
+	@Override
+	public void run()
+	{
+		f1.bow(f2);
+	}
+}
